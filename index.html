@@ -51,16 +51,24 @@
             color: #F8FAFC;
         }
 
+        .nav-container {
+            display: flex;
+            gap: 12px;
+        }
+
         .nav-link {
             color: #94A3B8;
             text-decoration: none;
             font-weight: 500;
-            font-size: 15px;
+            font-size: 14px;
             transition: all 0.3s;
             border: 1px solid #334155;
             padding: 6px 14px;
             border-radius: 6px;
             background-color: rgba(51, 65, 85, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .nav-link:hover {
@@ -167,13 +175,67 @@
             text-decoration: underline;
         }
 
+        /* Entegre Hakkımızda ve Hedefler Bölümü Stilleri */
+        .about-section {
+            background-color: #111827;
+            border-top: 2px solid #1E293B;
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-block {
+            margin-bottom: 50px;
+        }
+
+        .about-block h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #10B981;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-block p {
+            color: #E2E8F0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .goals-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .goals-list li {
+            background-color: #1E293B;
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #CBD5E1;
+        }
+
+        .goals-list strong {
+            color: #F8FAFC;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
         /* Entegre Veli Bölümü Stilleri */
         .veli-section {
             background-color: #1E293B;
             border-top: 2px solid #334155;
             border-bottom: 2px solid #334155;
             padding: 80px 20px;
-            margin-top: 80px;
         }
 
         .veli-container {
@@ -255,6 +317,8 @@
             .hero h1 { font-size: 32px; }
             .grid { grid-template-columns: 1fr; }
             header { flex-direction: column; gap: 12px; text-align: center; }
+            .nav-container { flex-direction: column; width: 100%; gap: 8px; }
+            .nav-link { width: 100%; justify-content: center; }
             .veli-container h2 { font-size: 24px; }
         }
     </style>
@@ -266,7 +330,10 @@
             <span class="logo-symbol">⬢</span>
             <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
         </div>
-        <a href="#veli-alani" class="nav-link">🛡️ Aileler İçin</a>
+        <div class="nav-container">
+            <a href="#hakkimizda-alani" class="nav-link">📌 Hakkımızda & Hedefler</a>
+            <a href="#veli-alani" class="nav-link">🛡️ Aileler İçin</a>
+        </div>
     </header>
 
     <section class="hero">
@@ -283,7 +350,7 @@
             <div>
                 <div class="card-icon">📱</div>
                 <h3>Telefonla Yapılacak 3 Büyük İş</h3>
-                <p>Sadece akıllı telefon kullanarak sosyal medya dünyasında editörlük, tasarım ve asistanlık yapmanın temel formülleri.</p>
+                <p>Sadece akıllı telefon kullanarak sosyal medya dünyasında editörlük, tasarım og asistanlık yapmanın temel formülleri.</p>
             </div>
             <a href="telefonla-is.html" class="card-link">Okumaya Başla →</a>
         </div>
@@ -308,6 +375,34 @@
             <a href="ilk-is.html" class="card-link">Okumaya Başla →</a>
         </div>
     </div>
+
+    <!-- ENTEGRE HAKKIMIZDA & HEDEFLERİMİZ BÖLÜMÜ -->
+    <section id="hakkimizda-alani" class="about-section">
+        <div class="about-container">
+            <div class="about-block">
+                <h2>📌 Hakkımızda</h2>
+                <p>YetenekHub, dijital dünyanın kontrolsüz ve tüketime dayalı ortamında kaybolmak istemeyen gençler için kurulmuş bağımsız bir üretim ve gelişim akademisidir. Biz, internette sadece vakit öldüren bir nesil yerine; akıllı cihazlarını katma değerli işler üreten birer enstrümana dönüştüren disiplinli bir topluluk inşa ediyoruz. Pahalı donanımlara veya büyük bilgisayarlara bağımlı kalmadan, doğru mobil strateji ve yüksek nizamla büyük işler başarılabileceğini kanıtlıyoruz.</p>
+            </div>
+
+            <div class="about-block">
+                <h2>🎯 Stratejik Hedeflerimiz</h2>
+                <ul class="goals-list">
+                    <li>
+                        <strong>1. Mobil Üretim Gücü Oluşturmak</strong>
+                        Genç yeteneklere sadece bir akıllı telefon kullanarak küresel pazar standartlarında grafik tasarım, video kurgu ve dijital asistanlık yapabilecek teknik donanımı ücretsiz kazandırmak.
+                    </li>
+                    <li>
+                        <strong>2. Dijital Disiplin ve İş Ahlakı Aşılamak</strong>
+                        Topluluğumuza katılan her bireye erken yaşta sorumluluk almayı, nizamlı çalışmayı, profesyonel portfolyo oluşturmayı ve müşterilerle doğru kurumsal iletişim kurma sanatını öğretmek.
+                    </li>
+                    <li>
+                        <strong>3. Güvenli ve Kolektif Eğitim Karargâhı Olmak</strong>
+                        İnternetin karmaşasından uzak, tamamen denetlenen, kötü alışkanlıklardan arındırılmış ve herkesin birbirine tecrübe aktardığı elit bir dijital yardımlaşma ekosistemi sürdürmek.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <!-- ENTEGRE VELİ BİLGİLENDİRME BÖLÜMÜ -->
     <section id="veli-alani" class="veli-section">
