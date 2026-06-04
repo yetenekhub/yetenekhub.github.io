@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YetenekHub - Geleceğin Dijital Meslek Akademisi</title>
+    <title>YetenekHub - Dijital Üretim Akademisi</title>
     <style>
         * {
             margin: 0;
@@ -15,9 +15,9 @@
         body {
             background-color: #0F172A;
             color: #F8FAFC;
+            line-height: 1.6;
         }
 
-        /* Üst Menü / Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -37,7 +37,6 @@
 
         .logo-symbol {
             color: #10B981;
-            font-size: 28px;
         }
 
         .logo-text-yetenek {
@@ -48,19 +47,6 @@
             color: #F8FAFC;
         }
 
-        nav a {
-            color: #94A3B8;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #10B981;
-        }
-
-        /* Hero (Giriş) Bölümü */
         .hero {
             text-align: center;
             padding: 80px 20px;
@@ -69,63 +55,62 @@
 
         .hero h1 {
             font-size: 42px;
-            margin-bottom: 20px;
             font-weight: 800;
-        }
-
-        .hero p {
-            color: #94A3B8;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
-        }
-
-        .btn-discord {
-            display: inline-block;
-            background-color: #10B981;
-            color: #FFF;
-            padding: 15px 35px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
-            transition: transform 0.2s, background-color 0.3s;
-        }
-
-        .btn-discord:hover {
-            transform: translateY(-2px);
-            background-color: #059669;
-        }
-
-        /* Rehberler Bölümü */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 30px 0;
-            font-size: 28px;
+            margin-bottom: 20px;
             color: #F8FAFC;
         }
 
-        .card-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            padding: 0 5% 60px 5%;
+        .hero p {
+            font-size: 18px;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: #10B981;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .card {
             background-color: #1E293B;
             border: 1px solid #334155;
-            border-radius: 12px;
-            width: 320px;
-            padding: 25px;
-            transition: transform 0.3s, border-color 0.3s;
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
             border-color: #10B981;
         }
 
@@ -136,146 +121,96 @@
 
         .card h3 {
             font-size: 20px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: #F8FAFC;
         }
 
         .card p {
             color: #94A3B8;
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 15px;
             margin-bottom: 20px;
+            flex-grow: 1;
         }
 
         .card-link {
             color: #10B981;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* Veli Güvenlik Şeridi */
-        .parent-banner {
-            background-color: #1E3A8A;
-            border-top: 4px solid #3B82F6;
-            padding: 40px 10%;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .parent-banner h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #FFF;
-        }
-
-        .parent-banner p {
-            color: #93C5FD;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            line-height: 1.6;
-        }
-
-        .btn-parent {
-            display: inline-block;
-            background-color: transparent;
-            color: #FFF;
-            border: 2px solid #FFF;
-            padding: 10px 25px;
-            border-radius: 6px;
-            text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .btn-parent:hover {
-            background-color: #FFF;
-            color: #1E3A8A;
+        .card-link:hover {
+            text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             text-align: center;
-            padding: 30px;
-            background-color: #0F172A;
+            padding: 40px;
+            margin-top: 80px;
             color: #64748B;
-            font-size: 14px;
             border-top: 1px solid #1E293B;
+            font-size: 14px;
         }
 
-        /* Mobil Uyum */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-            nav a {
-                margin: 0 10px;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
+            .hero h1 { font-size: 32px; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Üst Menü -->
     <header>
         <div class="logo">
             <span class="logo-symbol">⬢</span>
             <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
         </div>
-        <nav>
-            <a href="#">Rehberler</a>
-            <a href="#">Güvenli Ticaret</a>
-            <a href="#">Velilerimiz İçin</a>
-        </nav>
     </header>
 
-    <!-- Giriş Alanı -->
     <section class="hero">
-        <h1>DİJİTAL DÜNYANIN YENİ NESİL ÜRETİM ÜSSÜ</h1>
-        <p>Sermayesiz, sadece akıllı telefonunu kullanarak üretim ordusuna katıl. Eğitim al, yeteneğini geliştir ve güvenle kazanmaya başla.</p>
-        <a href="#" class="btn-discord">🟢 Discord Karargahına Katıl</a>
+        <h1>Sadece Telefonunla Dijital Bir Güce Dönüş</h1>
+        <p>Bilgisayara ihtiyacın yok. Doğru strateji, mobil araçlar ve nizamlı çalışma ile kendi dijital geleceğini bugünden inşa etmeye başla.</p>
+        <a href="#" class="btn-main">🟢 Discord Karargâhına Katıl</a>
     </section>
 
-    <!-- İçerik Kartları -->
-    <h2 class="section-title">📚 Öne Çıkan Mobil Rehberlerimiz</h2>
-    <div class="card-container">
+    <div class="section-title">🛡️ Ücretsiz Mobil Üretim Rehberleri</div>
+
+    <div class="grid">
         <!-- Kart 1 -->
         <div class="card">
-            <div class="card-icon">📱</div>
-            <h3>1. Telefonla Yapılacak 3 Büyük İş</h3>
-            <p>Bilgisayar şartı olmadan, sadece elindeki akıllı telefonu bir üretim merkezine dönüştürerek harçlığını çıkarmanın yolları.</p>
-            <a href="#" class="card-link">Okumaya Başla →</a>
+            <div>
+                <div class="card-icon">📱</div>
+                <h3>Telefonla Yapılacak 3 Büyük İş</h3>
+                <p>Sadece akıllı telefon kullanarak sosyal medya dünyasında editörlük, tasarım ve asistanlık yapmanın temel formülleri.</p>
+            </div>
+            <a href="telefonla-is.html" class="card-link">Okumaya Başla →</a>
         </div>
+
         <!-- Kart 2 -->
         <div class="card">
-            <div class="card-icon">🎮</div>
-            <h3>2. Gaming Logo ve Kapak Tasarımı</h3>
-            <p>Photoshop bilmeden, Canva mobil uygulaması üzerinden profesyonel espor logoları ve tıklanma rekoru kıracak kapaklar tasarlayın.</p>
-            <a href="#" class="card-link">Okumaya Başla →</a>
+            <div>
+                <div class="card-icon">🎨</div>
+                <h3>Gaming Logo & Kapak Tasarımı</h3>
+                <p>Ağır bilgisayar programları bilmeden, mobilde espor takımları ve yayıncılar için profesyonel kimlik üretme adımları.</p>
+            </div>
+            <a href="logo-tasarim.html" class="card-link">Okumaya Başla →</a>
         </div>
+
         <!-- Kart 3 -->
         <div class="card">
-            <div class="card-icon">📩</div>
-            <h3>3. İlk İşini Bağlama Taktikleri</h3>
-            <p>"Selam kanka" devri bitti. Sosyal medya üzerinden içerik üreticileri ve markalarla profesyonel iletişim kurarak iş kapma sanatı.</p>
-            <a href="#" class="card-link">Okumaya Başla →</a>
+            <div>
+                <div class="card-icon">💼</div>
+                <h3>İlk İşini Bağlama Taktikleri</h3>
+                <p>Sıfırdan başlarken hayalet portfolyo yöntemi ve soğuk mesaj (Cold DM) stratejisiyle ilk dijital müşterini bulma sanatı.</p>
+            </div>
+            <a href="ilk-is.html" class="card-link">Okumaya Başla →</a>
         </div>
     </div>
 
-    <!-- Veli Şeridi -->
-    <section class="parent-banner">
-        <h2>🛡️ Ailelerimiz İçin Güvence Protokolü</h2>
-        <p>Gençlerin internetteki vaktini tüketime değil, üretime dönüştürüyoruz. Finansal risk yok, tamamen ücretsiz mesleki gelişim ve askeri nizamda güvenli bir topluluk ortamı sunuyoruz.</p>
-        <a href="#" class="btn-parent">Velilerimiz İçin Bilgilendirme Notu</a>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2026 YetenekHub. Tüm Hakları Saklıdır. | Geleceğin Dijital Yetenek Üssü</p>
+        <p>© 2026 YetenekHub. Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
