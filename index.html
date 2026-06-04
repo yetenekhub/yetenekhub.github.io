@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO ve Görünürlük Etiketleri (Meta Tags) -->
+    <!-- SEO ve Görünürlük Etiketleri -->
     <title>YetenekHub - Dijital Üretim Akademisi | Telefonda Üretim ve Tasarım</title>
     <meta name="description" content="YetenekHub, gençlerin akıllı telefonlarını kullanarak grafik tasarım, video kurgu ve dijital üretim yapmalarını sağlayan ücretsiz bir akademi ve topluluk üssüdür.">
     <meta name="keywords" content="yetenekhub, mobil tasarım, telefonla para kazanma, gaming logo tasarımı, mobil editörlük, ücretsiz dijital eğitim, gençler için güvenli internet, aile bilgilendirme">
-    <meta name="author" content="YetenekHub">
     <meta name="robots" content="index, follow">
 
-    <!-- Sosyal Medya Paylaşım Görünürlüğü (Open Graph) -->
+    <!-- Sosyal Medya Paylaşım Görünürlüğü -->
     <meta property="og:title" content="YetenekHub - Dijital Üretim Akademisi">
     <meta property="og:description" content="Sadece akıllı telefonunla dijital bir güce dönüş. Ücretsiz mobil üretim rehberleri ve güvenli topluluk alanı.">
     <meta property="og:type" content="website">
@@ -44,25 +43,37 @@
             z-index: 100;
         }
 
+        /* Yeni Logo Tasarımı */
         .logo {
-            font-size: 24px;
-            font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            cursor: pointer;
         }
 
-        .logo-symbol {
-            color: #10B981;
+        .logo-box {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 22px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
-        .logo-text-yetenek {
-            color: #10B981;
+        .logo-text {
+            display: flex;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        .logo-text-hub {
-            color: #F8FAFC;
-        }
+        .yetenek { color: #10B981; }
+        .hub { color: #F8FAFC; }
 
         .nav-container {
             display: flex;
@@ -188,7 +199,6 @@
             text-decoration: underline;
         }
 
-        /* Entegre Hakkımızda ve Hedefler Bölümü Stilleri */
         .about-section {
             background-color: #111827;
             border-top: 2px solid #1E293B;
@@ -243,7 +253,6 @@
             font-size: 17px;
         }
 
-        /* Entegre Veli Bölümü Stilleri */
         .veli-section {
             background-color: #1E293B;
             border-top: 2px solid #334155;
@@ -340,8 +349,10 @@
 
     <header>
         <div class="logo">
-            <span class="logo-symbol">⬢</span>
-            <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
+            <div class="logo-box">⬢</div>
+            <div class="logo-text">
+                <span class="yetenek">YETENEK</span><span class="hub">HUB</span>
+            </div>
         </div>
         <div class="nav-container">
             <a href="#hakkimizda-alani" class="nav-link">📌 Hakkımızda & Hedefler</a>
@@ -358,7 +369,6 @@
     <div class="section-title">🛡️ Ücretsiz Mobil Üretim Rehberleri</div>
 
     <div class="grid">
-        <!-- Kart 1 -->
         <div class="card">
             <div>
                 <div class="card-icon">📱</div>
@@ -368,7 +378,6 @@
             <a href="telefonla-is.html" class="card-link">Okumaya Başla →</a>
         </div>
 
-        <!-- Kart 2 -->
         <div class="card">
             <div>
                 <div class="card-icon">🎨</div>
@@ -378,7 +387,6 @@
             <a href="logo-tasarim.html" class="card-link">Okumaya Başla →</a>
         </div>
 
-        <!-- Kart 3 -->
         <div class="card">
             <div>
                 <div class="card-icon">💼</div>
@@ -389,12 +397,11 @@
         </div>
     </div>
 
-    <!-- ENTEGRE HAKKIMIZDA & HEDEFLERİMİZ BÖLÜMÜ -->
     <section id="hakkimizda-alani" class="about-section">
         <div class="about-container">
             <div class="about-block">
                 <h2>📌 Hakkımızda</h2>
-                <p>YetenekHub, dijital dünyanın kontrolsüz ve tüketime dayalı ortamında kaybolmak istemeyen gençler için kurulmuş bağımsız bir üretim ve gelişim akademisidir. Biz, internette sadece vakit öldüren bir nesil yerine; akıllı cihazlarını katma değerli işler üreten birer enstrümana dönüştüren disiplinli bir topluluk inşa ediyoruz. Pahalı donanımlara veya büyük bilgisayarlara bağımlı kalmadan, doğru mobil strateji ve yüksek nizamla büyük işler başarılabileceğini kanıtlıyoruz.</p>
+                <p>YetenekHub, dijital dünyanın kontrolsüz ve tüketime dayalı ortamında kaybolmak istemeyen gençler için kurulmuş bağımsız bir üretim ve gelişim akademisidir. Biz, internette sadece vakit öldüren bir nesil yerine; akıllı cihazlarını katma değerli işler üreten birer enstrümana dönüştüren disiplinli bir topluluk inşa ediyoruz.</p>
             </div>
 
             <div class="about-block">
@@ -410,14 +417,13 @@
                     </li>
                     <li>
                         <strong>3. Güvenli ve Kolektif Eğitim Karargâhı Olmak</strong>
-                        İnternetin karmaşasından uzak, tamamen denetlenen, kötü alışkanlıklardan arındırılmış ve herkesin birbirine tecrübe aktardığı elit bir dijital yardımlaşma ekosistemi sürdürmek.
+                        İnternetin karmaşasından uzak, tamamen denetlenen ve herkesin birbirine tecrübe aktardığı elit bir dijital yardımlaşma ekosistemi sürdürmek.
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- ENTEGRE VELİ BİLGİLENDİRME BÖLÜMÜ -->
     <section id="veli-alani" class="veli-section">
         <div class="veli-container">
             <span class="badge">🛡️ Sayın Velilerimizin Bilgisine</span>
@@ -429,22 +435,22 @@
 
             <div class="protocol-card">
                 <div class="protocol-title">🛡️ 1. %100 Güvenli ve Denetlenen Ortam</div>
-                <p>Eğitimlerimizin ve topluluğumuzun toplandığı dijital karargâhımız (Discord sunucumuz), yönetim ekibimiz tarafından 7/24 nizam ve askeri disiplinle denetlenmektedir. Argo, küfür, kötü alışkanlıklara özendirme veya zararlı içeriklerin topluluğumuza sızmasına asla müsaade edilmez.</p>
+                <p>Eğitimlerimizin ve topluluğumuzun toplandığı dijital karargâhımız, yönetim ekibimiz tarafından 7/24 nizam ve askeri disiplinle denetlenmektedir.</p>
             </div>
 
             <div class="protocol-card">
                 <div class="protocol-title">💎 2. Tamamen Ücretsiz ve Ticari Tuzaklardan Uzak</div>
-                <p>YetenekHub bünyesinde sunulan tüm temel rehberler, eğitim içerikleri ve yönlendirmeler tamamen ücretsizdir. Gençleri internetteki sahte "zengin olma" kurslarının ve finansal tuzakların mağduru olmaktan korumayı kendimize görev biliyoruz.</p>
+                <p>YetenekHub bünyesinde sunulan tüm temel rehberler, eğitim içerikleri ve yönlendirmeler tamamen ücretsizdir.</p>
             </div>
 
             <div class="protocol-card">
                 <div class="protocol-title">🎯 3. Tüketen Değil, Üreten Bir Nesil</div>
-                <p>Amacımız, çocuklarımızın telefonları sadece video izleyip oyun oynamak için değil; grafik tasarım, video kurgu ve yapay zeka araçlarını kullanarak katma değerli işler üretmek için birer enstrüman olarak görmelerini sağlamaktır.</p>
+                <p>Amacımız, çocuklarımızın telefonları sadece video izleyip oyun oynamak için değil; grafik tasarım ve yapay zeka araçlarını kullanarak katma değerli işler üretmek için kullanmalarını sağlamaktır.</p>
             </div>
 
             <div class="trust-box">
                 <h3>Bizimle İletişime Geçebilirsiniz</h3>
-                <p>Çocuğunuzun gelişimi, platformdaki güvenliği veya merak ettiğiniz her türlü konu için yönetim kadromuzla doğrudan iletişim kurabilirsiniz. Gençlerimizi geleceğe omuz omuza hazırlayacağız.</p>
+                <p>Çocuğunuzun gelişimi, platformdaki güvenliği veya merak ettiğiniz her türlü konu için yönetim kadromuzla doğrudan iletişim kurabilirsiniz.</p>
             </div>
         </div>
     </section>
