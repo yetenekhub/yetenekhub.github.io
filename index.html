@@ -10,6 +10,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -25,6 +26,9 @@
             padding: 20px 5%;
             background-color: #1E293B;
             border-bottom: 2px solid #334155;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
@@ -45,6 +49,24 @@
 
         .logo-text-hub {
             color: #F8FAFC;
+        }
+
+        .nav-link {
+            color: #94A3B8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: 1px solid #334155;
+            padding: 6px 14px;
+            border-radius: 6px;
+            background-color: rgba(51, 65, 85, 0.2);
+        }
+
+        .nav-link:hover {
+            color: #10B981;
+            border-color: #10B981;
+            background-color: rgba(16, 185, 129, 0.1);
         }
 
         .hero {
@@ -95,7 +117,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             padding: 0 20px;
         }
 
@@ -145,10 +167,85 @@
             text-decoration: underline;
         }
 
+        /* Entegre Veli Bölümü Stilleri */
+        .veli-section {
+            background-color: #1E293B;
+            border-top: 2px solid #334155;
+            border-bottom: 2px solid #334155;
+            padding: 80px 20px;
+            margin-top: 80px;
+        }
+
+        .veli-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3B82F6;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .veli-container h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #F8FAFC;
+        }
+
+        .intro-text {
+            font-size: 17px;
+            color: #E2E8F0;
+            margin-bottom: 40px;
+            border-left: 4px solid #10B981;
+            padding-left: 20px;
+        }
+
+        .protocol-card {
+            background-color: #0F172A;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .protocol-title {
+            font-size: 19px;
+            color: #10B981;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .protocol-card p {
+            color: #CBD5E1;
+            font-size: 15px;
+        }
+
+        .trust-box {
+            background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+            border: 1px solid #10B981;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .trust-box h3 {
+            color: #10B981;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
-            margin-top: 80px;
             color: #64748B;
             border-top: 1px solid #1E293B;
             font-size: 14px;
@@ -157,6 +254,8 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 32px; }
             .grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 12px; text-align: center; }
+            .veli-container h2 { font-size: 24px; }
         }
     </style>
 </head>
@@ -167,6 +266,7 @@
             <span class="logo-symbol">⬢</span>
             <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
         </div>
+        <a href="#veli-alani" class="nav-link">🛡️ Aileler İçin</a>
     </header>
 
     <section class="hero">
@@ -208,6 +308,38 @@
             <a href="ilk-is.html" class="card-link">Okumaya Başla →</a>
         </div>
     </div>
+
+    <!-- ENTEGRE VELİ BİLGİLENDİRME BÖLÜMÜ -->
+    <section id="veli-alani" class="veli-section">
+        <div class="veli-container">
+            <span class="badge">🛡️ Sayın Velilerimizin Bilgisine</span>
+            <h2>YetenekHub Aile Bilgilendirme ve Güvenlik Manifestosu</h2>
+            
+            <div class="intro-text">
+                Sayın Anne ve Babalar; Bu platform, gençlerin internetteki kontrolsüz dünyada vakit öldürmesini engellemek, onlara geleceğin dijital mesleklerini ve nizamlı çalışma disiplinini aşılamak amacıyla kurulmuş milli bir üretim üssüdür.
+            </div>
+
+            <div class="protocol-card">
+                <div class="protocol-title">🛡️ 1. %100 Güvenli ve Denetlenen Ortam</div>
+                <p>Eğitimlerimizin ve topluluğumuzun toplandığı dijital karargâhımız (Discord sunucumuz), yönetim ekibimiz tarafından 7/24 nizam ve askeri disiplinle denetlenmektedir. Argo, küfür, kötü alışkanlıklara özendirme veya zararlı içeriklerin topluluğumuza sızmasına asla müsaade edilmez.</p>
+            </div>
+
+            <div class="protocol-card">
+                <div class="protocol-title">💎 2. Tamamen Ücretsiz ve Ticari Tuzaklardan Uzak</div>
+                <p>YetenekHub bünyesinde sunulan tüm temel rehberler, eğitim içerikleri ve yönlendirmeler tamamen ücretsizdir. Gençleri internetteki sahte "zengin olma" kurslarının ve finansal tuzakların mağduru olmaktan korumayı kendimize görev biliyoruz.</p>
+            </div>
+
+            <div class="protocol-card">
+                <div class="protocol-title">🎯 3. Tüketen Değil, Üreten Bir Nesil</div>
+                <p>Amacımız, çocuklarımızın telefonları sadece video izleyip oyun oynamak için değil; grafik tasarım, video kurgu ve yapay zeka araçlarını kullanarak katma değerli işler üretmek için birer enstrüman olarak görmelerini sağlamaktır.</p>
+            </div>
+
+            <div class="trust-box">
+                <h3>Bizimle İletişime Geçebilirsiniz</h3>
+                <p>Çocuğunuzun gelişimi, platformdaki güvenliği veya merak ettiğiniz her türlü konu için yönetim kadromuzla doğrudan iletişim kurabilirsiniz. Gençlerimizi geleceğe omuz omuza hazırlayacağız.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 YetenekHub. Tüm Hakları Saklıdır.</p>
