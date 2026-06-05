@@ -3,351 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Search Console Doğrulama Kodu -->
+    <meta name="google-site-verification" content="WcE-E9Z5Gv5-97R43Sj8M2026_YetenekHub" />
+    
     <title>YetenekHub - Dijital Gelişim ve Üretim Platformu</title>
-    <meta name="description" content="YetenekHub, gençlerin akıllı telefon teknolojisini katma değerli üretim ve profesyonel gelişim enstrümanına dönüştürmesini sağlayan rehber platformdur.">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f8fafc;
-            color: #334155;
-            line-height: 1.7;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .navbar {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 12px;
-        }
-        .logo-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
-        }
-        .logo-symbol {
-            width: 16px;
-            height: 16px;
-            border: 3px solid #ffffff;
-            border-radius: 50%;
-            position: relative;
-        }
-        .logo-symbol::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            top: -5px;
-            right: -5px;
-        }
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            letter-spacing: -0.5px;
-        }
-        .logo-text span {
-            color: #2563eb;
-            font-weight: 400;
-        }
+
         header {
-            background-color: #ffffff;
-            padding: 50px 20px 60px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        header p {
-            margin: 15px 0 0 0;
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #0f172a;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: #475569;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #1e3a8a;
-            color: #ffffff;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            text-align: center;
-            transition: background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #2563eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        /* SEO Odaklı Makaleler Bölümü */
-        .section-heading {
-            font-size: 1.7rem;
-            color: #0f172a;
+        .header-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
             font-weight: 800;
-            margin-bottom: 25px;
-            border-left: 4px solid #2563eb;
-            padding-left: 15px;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-        @media (max-width: 600px) {
-            .blog-grid { grid-template-columns: 1fr; }
-        }
-        .blog-card {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            color: #ffffff;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .blog-card h4 {
-            margin: 0 0 12px 0;
-            font-size: 1.4rem;
-            font-weight: 700;
-            line-height: 1.4;
-        }
-        .blog-card p {
-            margin: 0 0 25px 0;
-            color: #93c5fd;
-            font-size: 1.05rem;
-        }
-        .blog-link {
-            align-self: flex-start;
-            background-color: #ffffff;
-            color: #1e3a8a;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            transition: background-color 0.2s;
-        }
-        .blog-link:hover {
-            background-color: #f1f5f9;
         }
 
-        .section-block {
-            padding: 80px 20px;
+        .header-container p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .about-bg {
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .contact-bg {
-            background-color: #f1f5f9;
-        }
-        .section-title {
-            font-size: 2rem;
-            color: #0f172a;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        .section-desc {
-            color: #64748b;
-            font-size: 1.15rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-        }
-        .contact-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            display: inline-block;
-            min-width: 360px;
-            border: 1px solid #e2e8f0;
-            border-top: 4px solid #1e3a8a;
-        }
-        .contact-card .icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: #1e3a8a;
-        }
-        .contact-card h3 {
-            margin: 0 0 12px 0;
-            color: #0f172a;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-        .contact-card a {
-            color: #2563eb;
-            font-size: 1.25rem;
-            font-weight: 600;
+
+        nav a {
+            color: var(--primary-color);
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
-        .contact-card a:hover {
-            color: #1e3a8a;
-            text-decoration: underline;
+
+        nav a:hover {
+            color: var(--secondary-color);
         }
-        .contact-card p {
-            margin: 15px 0 0 0;
-            color: #94a3b8;
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .hero-section h2 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+        }
+
+        .card-content p {
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .card-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
             font-size: 0.9rem;
         }
-        footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.95rem;
-            border-top: 1px solid #1e293b;
+
+        @media (max-width: 768px) {
+            .header-container h1 { font-size: 2rem; }
+            .grid-container { grid-template-columns: 1fr; }
+            nav a { display: inline-block; margin: 5px 10px; }
         }
     </style>
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNBHTQ7SQJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MNBHTQ7SQJ');
-    </script>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="logo-container">
-            <div class="logo-icon"><div class="logo-symbol"></div></div>
-            <div class="logo-text">Yetenek<span>Hub</span></div>
-        </div>
-    </div>
-
     <header>
-        <p>Akıllı telefon teknolojisini katma değerli bir üretim ve kişisel gelişim enstrümanına dönüştürün.</p>
+        <div class="header-container">
+            <h1>YetenekHub</h1>
+            <p>Geleceğin Dijital Üreticileri İçin Rehber ve Eğitim Platformu</p>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Rehberler Bölümü -->
-        <div class="grid">
-            <div class="card">
-                <div>
-                    <h3>📱 Telefonla İş Rehberi</h3>
-                    <p>Sadece bir akıllı telefon kullanarak dijital iş dünyasında nasıl yer alabileceğinizi ve üretim süreçlerini nasıl profesyonelce yöneteceğinizi keşfedin.</p>
-                </div>
-                <a href="telefonla-is.html" class="btn">Rehberi İncele</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>🎨 Mobil Logo Tasarımı</h3>
-                    <p>Yüksek maliyetli bilgisayarlara ihtiyaç duymadan, mobil cihazlar üzerinden profesyonel standartlarda logo ve kurumsal kimlik hazırlama metotları.</p>
-                </div>
-                <a href="logo-tasarim.html" class="btn">Rehberi İncele</a>
-            </div>
-            <div class="card">
-                <h3>💼 İlk İş Edinme Stratejileri</h3>
-                <p>Edindiğiniz teorik birikimi sektörel kazanımlara dönüştürme, hedef kitleye ulaşma ve profesyonel iş ahlakı kuralları.</p>
-                <a href="ilk-is.html" class="btn">Rehberi İncele</a>
-            </div>
-        </div>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="dijital-gelecek.html">Veliler İçin</a>
+        <a href="dijital-uretim.html">Gençler İçin</a>
+    </nav>
 
-        <!-- SEO ODAKLI YENİ GEREKSİNİM: YAN YANA İKİLİ MAKALELER ALANI -->
-        <h3 class="section-heading">Kurumsal Yayınlar ve Makaleler</h3>
-        <div class="blog-grid">
-            <!-- 1. Makale: Veli Odaklı -->
-            <div class="blog-card">
-                <div>
-                    <h4>Velilerimiz İçin Kurumsal Bilgilendirme</h4>
-                    <p>Dijital Çağda Çocuklarımızın Geleceği: Akıllı Telefonlar Birer Gelişim ve Üretim Aracına Dönüşebilir mi?</p>
-                </div>
-                <a href="dijital-gelecek.html" class="blog-link">Makaleyi Oku</a>
-            </div>
-            
-            <!-- 2. Makale: Gençler / SEO Odaklı -->
-            <div class="blog-card">
-                <div>
-                    <h4>Sıfır Sermaye İle Dijital Dünyaya Adım Atın</h4>
-                    <p>Sadece akıllı telefonunuzu kullanarak üretebileceğiniz sektörel katma değerli alanlar ve yeni nesil iş modelleri.</p>
-                </div>
-                <a href="dijital-uretim.html" class="blog-link">Makaleyi Oku</a>
-            </div>
-        </div>
-    </div>
+    <main>
+        <section class="hero-section">
+            <h2>Dijital Dünyada Tüketici Değil, Üretici Olun!</h2>
+            <p>YetenekHub, gençlerin ve ailelerin dijital teknolojileri sadece eğlence için değil, geleceği inşa etmek, yeni beceriler kazanmak ve katma değer üretmek için nasıl kullanabileceğini gösteren bağımsız bir bilgi merkezidir.</p>
+        </section>
 
-    <section class="section-block about-bg">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">Biz Kimiz?</h2>
-            <p class="section-desc">
-                YetenekHub, gençlerin dijital dünyada geçirdikleri vakti katma değerli birer üretim sürecine dönüştürmek amacıyla kurulmuş yenilityçi bir gelişim platformudur.
-            </p>
-        </div>
-    </section>
+        <div class="grid-container">
+            <!-- Kart 1: Telefonla İş Rehberi -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Sadece Telefon Kullanarak Yapılabilecek Dijital İşler</h3>
+                    <p>Pahalı bilgisayarlara ihtiyacınız yok. Akıllı telefonunuzu bir üretim aracına dönüştürerek içerik üretimi, moderatörlük ve dijital asistanlık gibi alanlarda nasıl çalışabileceğinizi öğrenin.</p>
+                    <a href="telefonla-is.html" class="card-btn">Rehberi Oku</a>
+                </div>
+            </div>
 
-    <section class="section-block contact-bg">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 class="section-title">İletişime Geçin</h2>
-            <div class="contact-card">
-                <div class="icon">✉️</div>
-                <h3>Kurumsal E-Posta Adresi</h3>
-                <a href="mailto:Yetenekhub@outlook.com">Yetenekhub@outlook.com</a>
-                <p>Gönderilen tüm iletiler titizlikle incelenerek en kısa sürede yanıtlanmaktadır.</p>
+            <!-- Kart 2: Mobil Logo Tasarımı -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Mobilde Logo Tasarımı ve Grafik Üretimi</h3>
+                    <p>Tamamen ücretsiz mobil uygulamalar kullanarak profesyonel logolar, sosyal medya görselleri ve dijital grafikler tasarlamanın temel kuralları ve adım adım uygulama stratejileri.</p>
+                    <a href="logo-tasarim.html" class="card-btn">Eğitime Başla</a>
+                </div>
+            </div>
+
+            <!-- Kart 3: İlk İş Edinme Stratejileri -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Dijital Platformlarda İlk İş Edinme Stratejileri</h3>
+                    <p>İnternet üzerinden yeteneklerinizi sunarken ilk müşterinizi nasıl bulursunuz? Güvenli çalışma, nizamlı portfolyo oluşturma ve dijital dünyada doğru iletişim kurma yöntemleri.</p>
+                    <a href="ilk-is.html" class="card-btn">Stratejileri İncele</a>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 YetenekHub. Tüm Hakları Saklıdır. | Kurumsal Disiplin ve Güvenle Geliştirilmiştir.</p>
+        <p>&copy; 2026 YetenekHub. Tüm Hakları Saklıdır. Bilgi Güçtür.</p>
     </footer>
 
 </body>
