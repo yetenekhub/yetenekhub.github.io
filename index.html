@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YetenekHub - Dijital Gelişim ve Üretim Platformu</title>
+    <meta name="description" content="YetenekHub, gençlerin akıllı telefon teknolojisini katma değerli üretim ve profesyonel gelişim enstrümanına dönüştürmesini sağlayan rehber platformdur.">
     <style>
-        /* Modern, Ferah ve Güven Veren Tema Ayarları */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -14,8 +14,6 @@
             color: #334155;
             line-height: 1.7;
         }
-        
-        /* Kurumsal Logo ve Navigasyon Alanı */
         .navbar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
@@ -25,8 +23,6 @@
             align-items: center;
             box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
-        
-        /* CSS Tabanlı Vektörel Logo Tasarımı */
         .logo-container {
             display: flex;
             align-items: center;
@@ -70,8 +66,6 @@
             color: #2563eb;
             font-weight: 400;
         }
-
-        /* Giriş / Karşılama Alanı (Hero) */
         header {
             background-color: #ffffff;
             padding: 50px 20px 60px 20px;
@@ -86,26 +80,23 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
         .container {
             max-width: 1140px;
             margin: 0 auto;
             padding: 50px 20px;
         }
-        
-        /* Yeni Nesil Kart Tasarımları */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         .card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
@@ -113,7 +104,7 @@
         }
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
         }
         .card h3 {
             margin-top: 0;
@@ -141,8 +132,60 @@
         .btn:hover {
             background-color: #2563eb;
         }
-        
-        /* Kurumsal Bölümler */
+
+        /* SEO Odaklı Makaleler Bölümü */
+        .section-heading {
+            font-size: 1.7rem;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 25px;
+            border-left: 4px solid #2563eb;
+            padding-left: 15px;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        @media (max-width: 600px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        .blog-card {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .blog-card h4 {
+            margin: 0 0 12px 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .blog-card p {
+            margin: 0 0 25px 0;
+            color: #93c5fd;
+            font-size: 1.05rem;
+        }
+        .blog-link {
+            align-self: flex-start;
+            background-color: #ffffff;
+            color: #1e3a8a;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: background-color 0.2s;
+        }
+        .blog-link:hover {
+            background-color: #f1f5f9;
+        }
+
         .section-block {
             padding: 80px 20px;
             text-align: center;
@@ -151,44 +194,6 @@
             background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
-        }
-        .blog-banner-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            color: #ffffff;
-            border-radius: 12px;
-            padding: 45px;
-            text-align: left;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .blog-banner-text h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
-        .blog-banner-text p {
-            margin: 0;
-            color: #93c5fd;
-            font-size: 1.1rem;
-            max-width: 650px;
-        }
-        .blog-btn {
-            background-color: #ffffff;
-            color: #1e3a8a;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 700;
-            transition: background-color 0.2s;
-            white-space: nowrap;
-        }
-        .blog-btn:hover {
-            background-color: #f1f5f9;
         }
         .contact-bg {
             background-color: #f1f5f9;
@@ -206,8 +211,6 @@
             max-width: 800px;
             margin: 0 auto 40px auto;
         }
-        
-        /* Modern İletişim Kartı */
         .contact-card {
             background: #ffffff;
             border-radius: 12px;
@@ -234,7 +237,6 @@
             font-size: 1.25rem;
             font-weight: 600;
             text-decoration: none;
-            transition: color 0.2s;
         }
         .contact-card a:hover {
             color: #1e3a8a;
@@ -254,7 +256,7 @@
             border-top: 1px solid #1e293b;
         }
     </style>
-    <!-- Google Analytics (GA4) Altyapısı -->
+    <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNBHTQ7SQJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -265,23 +267,19 @@
 </head>
 <body>
 
-    <!-- Üst Kurumsal Navigasyon ve Logo Alanı -->
     <div class="navbar">
         <div class="logo-container">
-            <div class="logo-icon">
-                <div class="logo-symbol"></div>
-            </div>
+            <div class="logo-icon"><div class="logo-symbol"></div></div>
             <div class="logo-text">Yetenek<span>Hub</span></div>
         </div>
     </div>
 
-    <!-- Giriş Alanı -->
     <header>
         <p>Akıllı telefon teknolojisini katma değerli bir üretim ve kişisel gelişim enstrümanına dönüştürün.</p>
     </header>
 
     <div class="container">
-        <!-- Rehber Alanları -->
+        <!-- Rehberler Bölümü -->
         <div class="grid">
             <div class="card">
                 <div>
@@ -298,42 +296,47 @@
                 <a href="logo-tasarim.html" class="btn">Rehberi İncele</a>
             </div>
             <div class="card">
-                <div>
-                    <h3>💼 İlk İş Edinme Stratejileri</h3>
-                    <p>Edindiğiniz teorik birikimi sektörel kazanımlara dönüştürme, hedef kitleye ulaşma ve profesyonel iş ahlakı kuralları.</p>
-                </div>
+                <h3>💼 İlk İş Edinme Stratejileri</h3>
+                <p>Edindiğiniz teorik birikimi sektörel kazanımlara dönüştürme, hedef kitleye ulaşma ve profesyonel iş ahlakı kuralları.</p>
                 <a href="ilk-is.html" class="btn">Rehberi İncele</a>
             </div>
         </div>
 
-        <!-- YENİ YAZI DUYURU ALANI (KORUNAKLI VE ŞIK BANNER) -->
-        <div class="blog-banner-bg">
-            <div class="blog-banner-text">
-                <h3>Velilerimiz İçin Kurumsal Bilgilendirme</h3>
-                <p>Dijital Çağda Çocuklarımızın Geleceği: Akıllı Telefonlar Birer Gelişim ve Üretim Aracına Dönüşebilir mi?</p>
+        <!-- SEO ODAKLI YENİ GEREKSİNİM: YAN YANA İKİLİ MAKALELER ALANI -->
+        <h3 class="section-heading">Kurumsal Yayınlar ve Makaleler</h3>
+        <div class="blog-grid">
+            <!-- 1. Makale: Veli Odaklı -->
+            <div class="blog-card">
+                <div>
+                    <h4>Velilerimiz İçin Kurumsal Bilgilendirme</h4>
+                    <p>Dijital Çağda Çocuklarımızın Geleceği: Akıllı Telefonlar Birer Gelişim ve Üretim Aracına Dönüşebilir mi?</p>
+                </div>
+                <a href="dijital-gelecek.html" class="blog-link">Makaleyi Oku</a>
             </div>
-            <a href="dijital-gelecek.html" class="blog-btn">Makaleyi Oku</a>
+            
+            <!-- 2. Makale: Gençler / SEO Odaklı -->
+            <div class="blog-card">
+                <div>
+                    <h4>Sıfır Sermaye İle Dijital Dünyaya Adım Atın</h4>
+                    <p>Sadece akıllı telefonunuzu kullanarak üretebileceğiniz sektörel katma değerli alanlar ve yeni nesil iş modelleri.</p>
+                </div>
+                <a href="dijital-uretim.html" class="blog-link">Makaleyi Oku</a>
+            </div>
         </div>
     </div>
 
-    <!-- HAKKIMIZDA BÖLÜMÜ -->
     <section class="section-block about-bg">
         <div style="max-width: 800px; margin: 0 auto;">
             <h2 class="section-title">Biz Kimiz?</h2>
             <p class="section-desc">
-                YetenekHub, gençlerin dijital dünyada geçirdikleri vakti katma değerli birer üretim sürecine dönüştürmek amacıyla kurulmuş yenilikçi bir gelişim platformudur. Temel misyonumuz, yüksek maliyetli ekipman engellerini ortadan kaldırarak, gençlerin ellerindeki mevcut teknolojiyi profesyonel birer gelişim ve üretim aracına dönüştürmelerine rehberlik etmektir.
+                YetenekHub, gençlerin dijital dünyada geçirdikleri vakti katma değerli birer üretim sürecine dönüştürmek amacıyla kurulmuş yenilityçi bir gelişim platformudur.
             </p>
         </div>
     </section>
 
-    <!-- İLETİŞİM BÖLÜMÜ -->
     <section class="section-block contact-bg">
         <div style="max-width: 800px; margin: 0 auto;">
             <h2 class="section-title">İletişime Geçin</h2>
-            <p class="section-desc">
-                YetenekHub, şeffaflık ve kurumsal güven esasına göre faaliyet gösterir. Platformumuz hakkındaki sorularınız, iş birliği önerileriniz and veli danışma talepleriniz için yönetim ekibimizle doğrudan temas kurabilirsiniz.
-            </p>
-
             <div class="contact-card">
                 <div class="icon">✉️</div>
                 <h3>Kurumsal E-Posta Adresi</h3>
@@ -343,7 +346,6 @@
         </div>
     </section>
 
-    <!-- Kapanış Alanı -->
     <footer>
         <p>&copy; 2026 YetenekHub. Tüm Hakları Saklıdır. | Kurumsal Disiplin ve Güvenle Geliştirilmiştir.</p>
     </footer>
