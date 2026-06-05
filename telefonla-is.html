@@ -3,235 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telefonla Yapılacak 3 Büyük İş - YetenekHub</title>
+    <title>Telefonla İş Rehberi - YetenekHub</title>
     <style>
-        * {
+        /* Ana Tasarımla Tam Uyumlu Açık Tonlu Tema */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0F172A;
-            color: #F8FAFC;
+            background-color: #f8fafc;
+            color: #334155;
             line-height: 1.8;
         }
-
-        header {
+        
+        /* Kurumsal Navigasyon */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 5%;
-            background-color: #1E293B;
-            border-bottom: 2px solid #334155;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 8px;
             text-decoration: none;
+            gap: 12px;
         }
-
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            border-radius: 10px;
+        }
         .logo-symbol {
-            color: #10B981;
+            width: 16px;
+            height: 16px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
         }
-
-        .logo-text-yetenek {
-            color: #10B981;
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            letter-spacing: -0.5px;
         }
-
-        .logo-text-hub {
-            color: #F8FAFC;
-        }
-
-        .btn-back {
-            color: #94A3B8;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .btn-back:hover {
-            color: #10B981;
+        .logo-text span {
+            color: #2563eb;
+            font-weight: 400;
         }
 
         .container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10B981;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #F8FAFC;
-            line-height: 1.3;
-        }
-
-        .meta-info {
-            color: #64748B;
-            font-size: 14px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1E293B;
-            padding-bottom: 20px;
-        }
-
-        .job-section {
-            background-color: #1E293B;
-            border: 1px solid #334155;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #ffffff;
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
         }
 
-        .job-title {
-            font-size: 24px;
-            color: #10B981;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        p {
-            color: #CBD5E1;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-            color: #94A3B8;
-        }
-
-        li {
+        /* Başlıklar ve Metin Yapısı */
+        h1 {
+            color: #0f172a;
+            font-size: 2.4rem;
+            font-weight: 800;
             margin-bottom: 10px;
         }
-
-        .cta-box {
-            background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
-            border: 2px solid #3B82F6;
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            margin-top: 60px;
+        .subtitle {
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
-
-        .cta-box h3 {
-            font-size: 22px;
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.6rem;
+            margin-top: 40px;
             margin-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 25px;
         }
 
-        .btn-join {
-            display: inline-block;
-            background-color: #10B981;
-            color: white;
-            padding: 12px 30px;
+        /* Liste Yapıları */
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .step-item {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1e3a8a;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .step-item strong {
+            color: #0f172a;
+            font-size: 1.15rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Vurgu Kutusu */
+        .info-note {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 20px;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
-            transition: background-color 0.3s;
+            color: #166534;
+            margin: 30px 0;
         }
 
-        .btn-join:hover {
-            background-color: #059669;
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #2563eb;
         }
 
         footer {
+            background-color: #0f172a;
+            color: #94a3b8;
             text-align: center;
-            padding: 40px;
-            color: #64748B;
-            font-size: 14px;
-            border-top: 1px solid #1E293B;
-            margin-top: 80px;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 28px; }
-            .container { margin: 30px auto; }
+            padding: 30px 20px;
+            font-size: 0.95rem;
+            margin-top: 60px;
         }
     </style>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNBHTQ7SQJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MNBHTQ7SQJ');
+    </script>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">
-            <span class="logo-symbol">⬢</span>
-            <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
+    <div class="navbar">
+        <a href="index.html" class="logo-container">
+            <div class="logo-icon"><div class="logo-symbol"></div></div>
+            <div class="logo-text">Yetenek<span>Hub</span></div>
         </a>
-        <a href="index.html" class="btn-back">← Ana Sayfaya Dön</a>
-    </header>
+    </div>
 
     <div class="container">
-        <span class="badge">Mobil Üretim Rehberi #1</span>
-        <h1>Sadece Akıllı Telefon Kullanarak Dijital Dünyada Yer Edinebileceğiniz 3 Büyük İş</h1>
+        <h1>Telefonla İş Rehberi</h1>
+        <div class="subtitle">Cebinizdeki teknolojiyi pasif bir eğlence aracından, aktif bir üretim istasyonuna dönüştürme stratejileri.</div>
         
-        <div class="meta-info">
-            <span>Yayınlanma: Haziran 2026</span> | <span>Okuma Süresi: 5 Dakika</span>
+        <p>Çoğu insan dijital iş dünyasında yer alabilmek için çok pahalı donanımlara, gelişmiş bilgisayarlara ve ofislere ihtiyaç olduğunu düşünür. Oysa günümüzün akıllı telefonları, doğru iş modelleriyle birleştirildiğinde tek başına birer üretim merkezidir. Bu rehberde, mobil ekosistem üzerinden profesyonelce yürütebileceğiniz temel iş disiplinlerini ele alıyoruz.</p>
+
+        <h2>Mobil Cihazlarla Değer Üretebileceğiniz Alanlar</h2>
+        <p>Sadece telefonunuzu kullanarak kurumsal firmalara, yerel işletmelere veya dijital girişimcilere sunabileceğiniz yüksek potansiyelli çalışma modelleri şunlardır:</p>
+        
+        <div class="step-list">
+            <div class="step-item">
+                <strong>1. Dijital İçerik Yönetimi ve Planlama:</strong> İşletmelerin sosyal medya hesapları için içerik takvimleri oluşturmak, mobil planlama araçları (Meta Business Suite vb.) ile paylaşımları organize etmek ve topluluk yönetimini tamamen mobilden koordine etmek.
+            </div>
+            <div class="step-item">
+                <strong>2. Mobil Kısa Video Kurgusu (Reels / Shorts):</strong> CapCut, VN Video Editor gibi profesyonel mobil kurgu uygulamalarını kullanarak markaların dijital pazarlama videolarını, reklam kreatiflerini ve bilgilendirici içeriklerini yüksek kalitede hazırlamak.
+            </div>
+            <div class="step-item">
+                <strong>3. Metin Yazarlığı ve SEO Uyumlu İçerik Üretimi:</strong> Blog siteleri, e-ticaret ürün açıklamaları ve kurumsal web siteleri için gerekli olan özgün metinleri mobil klavyeler veya sesli dikte araçları yardımıyla profesyonelce kaleme almak.
+            </div>
         </div>
 
-        <p>Çoğu insan akıllı telefonları sadece sosyal medyada vakit öldürmek için kullanır. Oysa elinizdeki cihaz, doğru strateji ve disiplinle yönetildiğinde güçlü bir üretim merkezine dönüşebilir. Bilgisayarınız yoksa üzülmeyin; aşağıdaki 3 sektöre sadece telefonunuzla adım atabilirsiniz.</p>
+        <h2>Çalışma Prensipleri ve Disiplin</h2>
+        <p>Mobil çalışmanın en büyük tuzağı dikkat dağınıklığıdır. Başarılı bir dijital üretici olmak için şu kurallara sadık kalınmalıdır:</p>
 
-        <!-- İş 1 -->
-        <div class="job-section">
-            <div class="job-title">🎬 1. Kısa Videolar İçin Mobil Editörlük (Shorts / Reels / TikTok)</div>
-            <p>Günümüzde markaların ve içerik üreticilerinin en çok ihtiyaç duyduğu şey kısa, dinamik videolardır. Telefonunuzdaki ücretsiz uygulamalarla profesyonel seviyede kesim, altyazı ve efekt işlemleri yapabilirsiniz.</p>
-            <ul>
-                <li><strong>Kullanılacak Araçlar:</strong> CapCut Mobil, VN Video Editor.</li>
-                <li><strong>Nasıl Kazanılır:</strong> Yerel işletmelerin veya YouTuber'ların uzun videolarını alıp dikkat çekici kısa videolara dönüştürerek onlara hizmet satabilirsiniz.</li>
-            </ul>
+        <div class="step-list">
+            <div class="step-item">
+                <strong>Zaman Yönetimi:</strong> Çalışma saatleriniz boyunca sosyal medya bildirimlerinizi sessize alın ve cihazınızı sadece üretim odaklı uygulamalar için açık tutun.
+            </div>
+            <div class="step-item">
+                <strong>Dosya Düzeni:</strong> Müşterilerinize ait dökümanları, görselleri ve tasarımları bulut depolama sistemlerinde (Google Drive, OneDrive) klasörler halinde nizamla arşivleyin.
+            </div>
         </div>
 
-        <!-- İş 2 -->
-        <div class="job-section">
-            <div class="job-title">🎨 2. Mobil Sosyal Medya Tasarımcılığı</div>
-            <p>Instagram gönderileri, hikayeler veya YouTube video kapakları (Thumbnail) artık tamamen mobil uygulamalar üzerinden profesyonel standartlarda tasarlanabiliyor. Sektördeki talep her geçen gün büyüyor.</p>
-            <ul>
-                <li><strong>Kullanılacak Araçlar:</strong> Canva Mobil, Pixlr, PicsArt.</li>
-                <li><strong>Nasıl Kazanılır:</strong> Esnaflara, e-ticaret sayfalarına veya yeni açılan markalara aylık içerik tasarım paketi hazırlayarak düzenli gelir sağlayabilirsiniz.</li>
-            </ul>
+        <div class="info-note">
+            <strong>Kurumsal Hatırlatma:</strong> Unutmayın, elinizdeki cihaz sadece bir araçtır. İşin kalitesini belirleyen şey cihazın markası değil, sizin iş ahlakınız, sektörel disiplininiz ve sürekli gelişme azminizdir.
         </div>
 
-        <!-- İş 3 -->
-        <div class="job-section">
-            <div class="job-title">🤖 3. Yapay Zeka Destekli Dijital Asistanlık</div>
-            <p>Yapay zeka araçlarını telefonunuzdan kullanarak, işletmelerin ve içerik üreticilerinin iş yükünü hafifletebilirsiniz. E-posta yazımı, blog içeriği üretimi veya sosyal medya planlaması bu alana dahildir.</p>
-            <ul>
-                <li><strong>Kullanılacak Araçlar:</strong> ChatGPT Mobil, Claude, Google Keep.</li>
-                <li><strong>Nasıl Kazanılır:</strong> Yoğun çalışan profesyonellere haftalık içerik takvimi hazırlama veya gelen mailleri yapay zeka desteğiyle yanıtlama hizmeti sunabilirsiniz.</li>
-            </ul>
-        </div>
-
-        <!-- Eylem Çağrısı -->
-        <div class="cta-box">
-            <h3>Bu Yetenekleri Canlı Uygulamalarla Öğrenmeye Hazır Mısınız?</h3>
-            <p>Burada yazan adımların taktiksel detaylarını, müşteri bulma yöntemlerini ve portfolyo hazırlamayı Discord karargâhımızda hep birlikte pratik ediyoruz.</p>
-            <a href="#" class="btn-join">🟢 Topluluğa Katıl & Eğitime Başla</a>
-        </div>
+        <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
     </div>
 
     <footer>
-        <p>© 2026 YetenekHub. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2026 YetenekHub. Tüm Hakları Saklıdır. | Kurumsal Disiplin ve Güvenle Geliştirilmiştir.</p>
     </footer>
 
 </body>
