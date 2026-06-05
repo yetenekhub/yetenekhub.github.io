@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Ana Sayfa -->
     <url>
-        <loc>https://username.github.io/repository-name/index.html</loc>
+        <loc>https://yetenekhub.github.io/index.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.00</priority>
@@ -10,7 +10,7 @@
     
     <!-- Veliler İçin Bilgilendirme Makalesi -->
     <url>
-        <loc>https://username.github.io/repository-name/dijital-gelecek.html</loc>
+        <loc>https://yetenekhub.github.io/dijital-gelecek.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.80</priority>
@@ -18,7 +18,7 @@
     
     <!-- Gençler İçin SEO Makalesi -->
     <url>
-        <loc>https://username.github.io/repository-name/dijital-uretim.html</loc>
+        <loc>https://yetenekhub.github.io/dijital-uretim.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.80</priority>
@@ -26,7 +26,7 @@
     
     <!-- Telefonla İş Rehberi -->
     <url>
-        <loc>https://username.github.io/repository-name/telefonla-is.html</loc>
+        <loc>https://yetenekhub.github.io/telefonla-is.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
@@ -34,7 +34,7 @@
     
     <!-- Mobil Logo Tasarımı Rehberi -->
     <url>
-        <loc>https://username.github.io/repository-name/logo-tasarim.html</loc>
+        <loc>https://yetenekhub.github.io/logo-tasarim.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
@@ -42,7 +42,7 @@
     
     <!-- İlk İş Edinme Stratejileri Rehberi -->
     <url>
-        <loc>https://username.github.io/repository-name/ilk-is.html</loc>
+        <loc>https://yetenekhub.github.io/ilk-is.html</loc>
         <lastmod>2026-06-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.70</priority>
