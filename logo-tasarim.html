@@ -3,225 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Logo ve Kapak Tasarımı - YetenekHub</title>
+    <title>Mobil Logo Tasarımı Rehberi - YetenekHub</title>
     <style>
-        * {
+        /* Ana Sayfa İle Tam Uyumlu Açık Tonlu Tema */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0F172A;
-            color: #F8FAFC;
+            background-color: #f8fafc;
+            color: #334155;
             line-height: 1.8;
         }
-
-        header {
+        
+        /* Kurumsal Navigasyon */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 20px 5%;
-            background-color: #1E293B;
-            border-bottom: 2px solid #334155;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 8px;
             text-decoration: none;
+            gap: 12px;
         }
-
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            border-radius: 10px;
+        }
         .logo-symbol {
-            color: #10B981;
+            width: 16px;
+            height: 16px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
         }
-
-        .logo-text-yetenek {
-            color: #10B981;
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            letter-spacing: -0.5px;
         }
-
-        .logo-text-hub {
-            color: #F8FAFC;
-        }
-
-        .btn-back {
-            color: #94A3B8;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .btn-back:hover {
-            color: #10B981;
+        .logo-text span {
+            color: #2563eb;
+            font-weight: 400;
         }
 
         .container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #10B981;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #F8FAFC;
-            line-height: 1.3;
-        }
-
-        .meta-info {
-            color: #64748B;
-            font-size: 14px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #1E293B;
-            padding-bottom: 20px;
-        }
-
-        .guide-step {
-            background-color: #1E293B;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 35px;
-        }
-
-        .step-num {
-            font-size: 22px;
-            color: #10B981;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        p {
-            color: #CBD5E1;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .highlight-box {
-            background-color: rgba(59, 130, 246, 0.1);
-            border-left: 4px solid #3B82F6;
-            padding: 15px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-            color: #93C5FD;
-            font-size: 15px;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
-            border: 2px solid #3B82F6;
-            border-radius: 12px;
+            max-width: 850px;
+            margin: 40px auto;
             padding: 40px;
-            text-align: center;
-            margin-top: 60px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
         }
 
-        .cta-box h3 {
-            font-size: 22px;
+        /* Başlıklar ve Metin Yapısı */
+        h1 {
+            color: #0f172a;
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.6rem;
+            margin-top: 40px;
             margin-bottom: 15px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 25px;
         }
 
-        .btn-join {
-            display: inline-block;
-            background-color: #10B981;
-            color: white;
-            padding: 12px 30px;
+        /* Eğitim Adımları Listesi */
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .step-item {
+            background-color: #f1f5f9;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        .step-item strong {
+            color: #0f172a;
+            font-size: 1.15rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Bilgi Kutusu */
+        .info-note {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 20px;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
-            transition: background-color 0.3s;
+            color: #1e40af;
+            margin: 30px 0;
         }
 
-        .btn-join:hover {
-            background-color: #059669;
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #2563eb;
         }
 
         footer {
+            background-color: #0f172a;
+            color: #94a3b8;
             text-align: center;
-            padding: 40px;
-            color: #64748B;
-            font-size: 14px;
-            border-top: 1px solid #1E293B;
-            margin-top: 80px;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 28px; }
-            .container { margin: 30px auto; }
+            padding: 30px 20px;
+            font-size: 0.95rem;
+            margin-top: 60px;
         }
     </style>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNBHTQ7SQJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MNBHTQ7SQJ');
+    </script>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">
-            <span class="logo-symbol">⬢</span>
-            <span class="logo-text-yetenek">Yetenek</span><span class="logo-text-hub">Hub</span>
+    <!-- Üst Kurumsal Navigasyon -->
+    <div class="navbar">
+        <a href="index.html" class="logo-container">
+            <div class="logo-icon"><div class="logo-symbol"></div></div>
+            <div class="logo-text">Yetenek<span>Hub</span></div>
         </a>
-        <a href="index.html" class="btn-back">← Ana Sayfaya Dön</a>
-    </header>
+    </div>
 
     <div class="container">
-        <span class="badge">Mobil Tasarım Rehberi #2</span>
-        <h1>Photoshop Bilmeden Mobilde Profesyonel Gaming Logo ve Kapak Tasarımı</h1>
+        <h1>Mobil Logo Tasarımı Rehberi</h1>
+        <div class="subtitle">Büyük bilgisayarlara ihtiyaç duymadan, telefon üzerinden profesyonel standartlarda vektörel üretim teknikleri.</div>
         
-        <div class="meta-info">
-            <span>Yayınlanma: Haziran 2026</span> | <span>Okuma Süresi: 6 Dakika</span>
-        </div>
+        <p>Gelişen mobil ekosistem sayesinde, artık kurumsal kimlik ve logo tasarımı yapmak için çok yüksek bütçeli masaüstü bilgisayarlara bağımlı değiliz. Akıllı telefonlar, doğru metodolojiler kullanıldığında küresel standartlarda vektörel çizimler üretebilecek kapasiteye ulaşmıştır. Bu rehberde, sıfırdan profesyonel bir logonun mobil cihazlarla nasıl tasarlanacağını adım adım inceliyoruz.</p>
 
-        <p>Espor takımları, oyun kanalları ve yayıncılar her zaman kimliklerini yansıtacak güçlü görsellere ihtiyaç duyar. Eskiden bu işler için devasa bilgisayarlar ve ağır Photoshop bilgisi gerekirdi. Bugün ise sadece akıllı telefonunuzu kullanarak, dakikalar içinde piyasa standartlarında işler çıkarabilirsiniz.</p>
-
-        <!-- Adım 1 -->
-        <div class="guide-step">
-            <div class="step-num">1. Aşama: Doğru Malzemeyi Toplama (Vektör ve Font Seçimi)</div>
-            <p>Etkileyici bir oyun tasarımı, agresif ve net hatlara sahip espor maskotları ile başlar. Telefon tarayıcınız üzerinden telifsiz ve şeffaf (PNG) oyun karakterleri indirmek ilk adımımızdır.</p>
-            <div class="highlight-box">
-                <strong>Stratejik Taktik:</strong> Tasarımlarınızda sıradan yazı tipleri kullanmayın. "Dafont" gibi sitelerden telefonunuza "Sci-Fi" veya "Gaming" kategorisindeki sert hatlı fontları indirin.
+        <h2>1. Gerekli Mobil Altyapının Kurulması</h2>
+        <p>İlk aşamada, tasarımlarımızın baskı kalitesinde (vektörel) ve pürüzsüz olması için tamamen ücretsiz veya bütçe dostu profesyonel mobil uygulamaları cihazımıza indirmemiz gerekir:</p>
+        
+        <div class="step-list">
+            <div class="step-item">
+                <strong>Vector Ink veya Adobe Fresco (Mobil Sürümler):</strong> Logonun piksellenmemesi, büyütüldüğünde kalitesinin bozulmaması için tamamen vektörel (çizgisel) tabanlı çalışan mobil uygulamalardır.
+            </div>
+            <div class="step-item">
+                <strong>Canva (Kurumsal Şablon ve Tipografi Analizi):</strong> Renk paleti uyumunu yakalamak, modern yazı tiplerini (font) test etmek ve ilk eskiz fikirlerini geliştirmek için ideal bir yardımcı araçtır.
             </div>
         </div>
 
-        <!-- Adım 2 -->
-        <div class="guide-step">
-            <div class="step-num">2. Aşama: Katmanlı Çalışma Mühendisliği</div>
-            <p>Canva ve PicsArt mobil uygulamalarını kullanarak arka plan, karakter ve yazı katmanlarını üst üste bindireceğiz. Arka plana hafif bir karartma (vinyet) ve oyun temasına uygun neon ışık efektleri eklemek görseli derinleştirecektir.</p>
-            <p>YouTube kapaklarında (Thumbnail) ise sol tarafa büyük ve net bir yazı, sağ tarafa ise şaşırmış veya odaklanmış bir karakter yerleştirmek tıklanma oranlarını %40 oranında artırır.</p>
+        <h2>2. Tasarım Süreci ve Metotlar</h2>
+        <p>Başarılı bir logo tasarımı sadece estetik değil, belirli bir disiplinin ürünüdür. Süreci şu nizamla yönetiyoruz:</p>
+
+        <div class="step-list">
+            <div class="step-item">
+                <strong>Adım A: Fikir ve Karalama (Eskiz):</strong> Tasarıma doğrudan uygulamada başlamayın. Önce bir kağıt üzerinde veya telefonun basit not alma uygulamasında markanın ruhunu yansıtan geometrik şekilleri karalayın.
+            </div>
+            <div class="step-item">
+                <strong>Adım B: Geometrik Alt Yapı:</strong> Seçtiğiniz uygulamada daireler, kareler ve çizgiler kullanarak logonun ana hatlarını oluşturun. Mobil ekranda parmak hareketleriyle hassas çizim yapmak için kılavuz çizgilerini (Grid) mutlaka aktif hale getirin.
+            </div>
+            <div class="step-item">
+                <strong>Adım C: Kurumsal Renk Teorisi:</strong> Güven aşılamak isteyen markalar için derin mavi ve gri tonları; dinamizm arayanlar için ise turuncu ve canlı mavi kombinasyonlarını tercih ederek renk paletinizi maksimum 2 veya 3 renk ile sınırlayın.
+            </div>
         </div>
 
-        <!-- Adım 3 -->
-        <div class="guide-step">
-            <div class="step-num">3. Aşama: Renk Derecelendirmesi ve Keskinlik</div>
-            <p>Tasarım bittiğinde direkt kaydetmiyoruz. Görselin telefonda ve bilgisayarda "parlaması" için son bir nizam ayarı gerekiyor. Lightroom Mobil uygulamasına resmi atarak netliği, kontrastı ve renk doygunluğunu hafifçe artırıyoruz. Bu işlem, tasarıma "ucuz mobil uygulama" havasından çıkarıp "profesyonel stüdyo" imajı verir.</p>
+        <div class="info-note">
+            <strong>Profesyonel İpucu:</strong> Tasarladığınız logoları müşteriye teslim ederken mutlaka arka planı şeffaf olan <strong>.PNG</strong> formatında ve matbaa baskılarına uyumlu yüksek çözünürlüklü <strong>.SVG (Vektörel)</strong> formatında dışarı aktarın (Export).
         </div>
 
-        <!-- Eylem Çağrısı -->
-        <div class="cta-box">
-            <h3>İlk Portfolyonuzu Birlikte Hazırlayalım</h3>
-            <p>Hangi şablonların daha çok satıldığını, yayıncıların en çok hangi renkleri talep ettiğini ve hazır tasarım paketlerimizi Discord sunucumuzda paylaşıyoruz.</p>
-            <a href="#" class="btn-join">🟢 Tasarım Birliğine Katıl</a>
-        </div>
+        <h2>3. Sektörel Değer Oluşturma</h2>
+        <p>Bu teknik uzmanlığı edindikten sonra, YetenekHub bünyesindeki "İlk İş Edinme Stratejileri" rehberimizi inceleyerek yerel işletmelere, dijital girişimcilere veya yeni açılan sosyal medya sayfalarına profesyonel logo tasarım hizmeti sunmaya başlayabilir, yeteneğinizi somut bir katma değere dönüştürebilirsiniz.</p>
+
+        <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
     </div>
 
     <footer>
-        <p>© 2026 YetenekHub. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2026 YetenekHub. Tüm Hakları Saklıdır. | Kurumsal Disiplin ve Güvenle Geliştirilmiştir.</p>
     </footer>
 
 </body>
