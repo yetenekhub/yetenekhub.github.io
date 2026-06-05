@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telefonla İş Rehberi - YetenekHub</title>
+    <meta name="description" content="Sadece akıllı telefon kullanarak dijital dünyada üretebileceğiniz iş modelleri ve profesyonel gelişim stratejileri.">
     <style>
-        /* Ana Tasarımla Tam Uyumlu Açık Tonlu Tema */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8fafc;
             color: #334155;
-            line-height: 1.8;
+            line-height: 1.7;
         }
-        
-        /* Kurumsal Navigasyon */
         .navbar {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
@@ -23,7 +21,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
         }
         .logo-container {
             display: flex;
@@ -56,88 +53,73 @@
             color: #2563eb;
             font-weight: 400;
         }
-
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
+        .back-link {
+            display: block;
+            max-width: 150px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
         }
-
-        /* Başlıklar ve Metin Yapısı */
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
         h1 {
             color: #0f172a;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             font-weight: 800;
+            text-align: center;
             margin-bottom: 10px;
         }
         .subtitle {
+            text-align: center;
             color: #64748b;
             font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .guide-section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 35px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
         }
-        h2 {
+        .guide-section h2 {
             color: #1e3a8a;
-            font-size: 1.6rem;
-            margin-top: 40px;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
             border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
         }
-        p {
-            font-size: 1.1rem;
-            color: #475569;
-            margin-bottom: 25px;
-        }
-
-        /* Liste Yapıları */
-        .step-list {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-        .step-item {
-            background-color: #f1f5f9;
-            border-left: 4px solid #1e3a8a;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 0 8px 8px 0;
-        }
-        .step-item strong {
+        .guide-section h3 {
             color: #0f172a;
             font-size: 1.15rem;
-            display: block;
-            margin-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
-
-        /* Vurgu Kutusu */
-        .info-note {
-            background-color: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            padding: 20px;
-            border-radius: 8px;
-            color: #166534;
-            margin: 30px 0;
+        ol, ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
         }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            background-color: #1e3a8a;
-            color: #ffffff;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background-color 0.2s;
+        li {
+            margin-bottom: 10px;
         }
-        .back-btn:hover {
-            background-color: #2563eb;
+        .highlight-box {
+            background-color: #f1f5f9;
+            border-left: 4px solid #1e3a8a;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-weight: 500;
         }
-
         footer {
             background-color: #0f172a;
             color: #94a3b8;
@@ -165,44 +147,45 @@
         </a>
     </div>
 
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+
     <div class="container">
-        <h1>Telefonla İş Rehberi</h1>
-        <div class="subtitle">Cebinizdeki teknolojiyi pasif bir eğlence aracından, aktif bir üretim istasyonuna dönüştürme stratejileri.</div>
-        
-        <p>Çoğu insan dijital iş dünyasında yer alabilmek için çok pahalı donanımlara, gelişmiş bilgisayarlara ve ofislere ihtiyaç olduğunu düşünür. Oysa günümüzün akıllı telefonları, doğru iş modelleriyle birleştirildiğinde tek başına birer üretim merkezidir. Bu rehberde, mobil ekosistem üzerinden profesyonelce yürütebileceğiniz temel iş disiplinlerini ele alıyoruz.</p>
+        <h1>📱 Telefonla İş Rehberi</h1>
+        <p class="subtitle">Pahalı donanımlara bağımlı kalmadan, sadece akıllı telefonunuzla dijital dünyada üretim yapın.</p>
 
-        <h2>Mobil Cihazlarla Değer Üretebileceğiniz Alanlar</h2>
-        <p>Sadece telefonunuzu kullanarak kurumsal firmalara, yerel işletmelere veya dijital girişimcilere sunabileceğiniz yüksek potansiyelli çalışma modelleri şunlardır:</p>
-        
-        <div class="step-list">
-            <div class="step-item">
-                <strong>1. Dijital İçerik Yönetimi ve Planlama:</strong> İşletmelerin sosyal medya hesapları için içerik takvimleri oluşturmak, mobil planlama araçları (Meta Business Suite vb.) ile paylaşımları organize etmek ve topluluk yönetimini tamamen mobilden koordine etmek.
-            </div>
-            <div class="step-item">
-                <strong>2. Mobil Kısa Video Kurgusu (Reels / Shorts):</strong> CapCut, VN Video Editor gibi profesyonel mobil kurgu uygulamalarını kullanarak markaların dijital pazarlama videolarını, reklam kreatiflerini ve bilgilendirici içeriklerini yüksek kalitede hazırlamak.
-            </div>
-            <div class="step-item">
-                <strong>3. Metin Yazarlığı ve SEO Uyumlu İçerik Üretimi:</strong> Blog siteleri, e-ticaret ürün açıklamaları ve kurumsal web siteleri için gerekli olan özgün metinleri mobil klavyeler veya sesli dikte araçları yardımıyla profesyonelce kaleme almak.
-            </div>
+        <div class="guide-section">
+            <h2>1. Sosyal Medya İçerik ve Topluluk Yönetimi</h2>
+            <p>Günümüzde kurumsal markalar ve yerel işletmeler, dijital dünyada var olabilmek için nizamlı içerik üretmek zorundadır. Bu süreçlerin %90'ı tamamen mobil cihazlar üzerinden yönetilebilir durumdadır.</p>
+            <h3>Neler Yapabilirsiniz?</h3>
+            <ul>
+                <li><strong>Moderatörlük:</strong> Büyük markaların veya toplulukların Telegram, Discord veya Instagram yorum/mesaj kutularını nizamla yönetmek, gelen soruları kurumsal bir dille yanıtlamak.</li>
+                <li><strong>İçerik Planlama ve Yükleme:</strong> İşletmelerin haftalık gönderi planlarını hazırlayıp, mobil uygulamalar aracılığıyla doğru saatlerde paylaşımını gerçekleştirmek.</li>
+            </ul>
         </div>
 
-        <h2>Çalışma Prensipleri ve Disiplin</h2>
-        <p>Mobil çalışmanın en büyük tuzağı dikkat dağınıklığıdır. Başarılı bir dijital üretici olmak için şu kurallara sadık kalınmalıdır:</p>
-
-        <div class="step-list">
-            <div class="step-item">
-                <strong>Zaman Yönetimi:</strong> Çalışma saatleriniz boyunca sosyal medya bildirimlerinizi sessize alın ve cihazınızı sadece üretim odaklı uygulamalar için açık tutun.
-            </div>
-            <div class="step-item">
-                <strong>Dosya Düzeni:</strong> Müşterilerinize ait dökümanları, görselleri ve tasarımları bulut depolama sistemlerinde (Google Drive, OneDrive) klasörler halinde nizamla arşivleyin.
-            </div>
+        <div class="guide-section">
+            <h2>2. Mobil Tabanlı Metin Yazarlığı ve Editörlük</h2>
+            <p>Web sitelerinin blog bölümleri, e-ticaret sitelerinin ürün açıklamaları ve sosyal medya gönderilerinin alt metinleri (caption) için her zaman nitelikli yazarlara ihtiyaç duyulur. Yazarlık, sadece odaklanma ve klavye gerektiren en temiz mobil işlerden biridir.</p>
+            <h3>Çalışma Stratejisi:</h3>
+            <ol>
+                <li>Telefonunuza Google Dokümanlar (Google Docs) uygulamasını indirin.</li>
+                <li>Gelen işleri nizamlı klasörler halinde tutarak, bulut tabanlı sistem sayesinde kaybolma riski olmadan metinlerinizi üretin.</li>
+                <li>Yapay zeka araçlarını (ChatGPT gibi) birer asistan olarak kullanarak metinlerinizin taslaklarını hızlandırın, ardından kendi özgün yorumunuzla nizamlayın.</li>
+            </ol>
         </div>
 
-        <div class="info-note">
-            <strong>Kurumsal Hatırlatma:</strong> Unutmayın, elinizdeki cihaz sadece bir araçtır. İşin kalitesini belirleyen şey cihazın markası değil, sizin iş ahlakınız, sektörel disiplininiz ve sürekli gelişme azminizdir.
+        <div class="guide-section">
+            <h2>3. Mobil Seslendirme ve Dijital Asistanlık</h2>
+            <p>Yeni nesil akıllı telefonların mikrofon kaliteleri, stüdyo ortamlarını aratmayacak seviyeye ulaşmıştır. Doğru bir oda akustiği ve nizamlı bir çalışma ile ses analizi ve seslendirme sektörüne adım atabilirsiniz.</p>
+            <div class="highlight-box">
+                Kurumsal Altın Kural: Dijital dünyada sermayeniz pahalı cihazlar değil, iş disiplininiz ve nizamlı iletişim becerinizdir.
+            </div>
+            <h3>Yol Haritası:</h3>
+            <ul>
+                <li>E-kitap seslendirmeleri, YouTube bilgilendirme videoları veya yerel reklamlar için mobil ses kayıt uygulamalarıyla ses demoları oluşturun.</li>
+                <li>İşletmeler adına e-posta trafiğini yönetmek, randevuları nizamlamak ve günlük veri girişlerini mobil tablolar (Google Sheets) üzerinden gerçekleştirmek için "Dijital Asistanlık" hizmeti sunun.</li>
+            </ul>
         </div>
-
-        <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
     </div>
 
     <footer>
