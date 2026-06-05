@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YetenekHub - Dijital Gelişim ve Üretim Platformu</title>
     <style>
-        /* Modern, Ferah ve Açık Tonlu Tema Ayarları */
+        /* Modern, Ferah ve Güven Veren Tema Ayarları */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -14,19 +14,69 @@
             color: #334155;
             line-height: 1.7;
         }
+        
+        /* Kurumsal Logo ve Navigasyon Alanı */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        
+        /* CSS Tabanlı Vektörel Logo Tasarımı */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+        }
+        .logo-symbol {
+            width: 16px;
+            height: 16px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            top: -5px;
+            right: -5px;
+        }
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #2563eb;
+            font-weight: 400;
+        }
+
+        /* Giriş / Karşılama Alanı (Hero) */
         header {
             background-color: #ffffff;
-            color: #1e3a8a;
-            padding: 60px 20px;
+            padding: 50px 20px 60px 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
         }
         header p {
             margin: 15px 0 0 0;
@@ -36,11 +86,13 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
         .container {
             max-width: 1140px;
             margin: 0 auto;
             padding: 50px 20px;
         }
+        
         /* Yeni Nesil Kart Tasarımları */
         .grid {
             display: grid;
@@ -66,7 +118,7 @@
         .card h3 {
             margin-top: 0;
             color: #0f172a;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 15px;
         }
@@ -87,9 +139,10 @@
             transition: background-color 0.2s;
         }
         .btn:hover {
-            background-color: #1d4ed8;
+            background-color: #2563eb;
         }
-        /* Kurumsal Kuramsal Bölümler */
+        
+        /* Kurumsal Bölümler */
         .section-block {
             padding: 80px 20px;
             text-align: center;
@@ -107,7 +160,6 @@
             color: #0f172a;
             font-weight: 700;
             margin-bottom: 20px;
-            position: relative;
         }
         .section-desc {
             color: #64748b;
@@ -116,6 +168,7 @@
             max-width: 800px;
             margin: 0 auto 40px auto;
         }
+        
         /* Modern İletişim Kartı */
         .contact-card {
             background: #ffffff;
@@ -139,7 +192,7 @@
             font-weight: 700;
         }
         .contact-card a {
-            color: #1d4ed8;
+            color: #2563eb;
             font-size: 1.25rem;
             font-weight: 600;
             text-decoration: none;
@@ -174,14 +227,23 @@
 </head>
 <body>
 
-    <!-- Üst Kurumsal Alan / Header -->
+    <!-- Üst Kurumsal Navigasyon ve Logo Alanı -->
+    <div class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <div class="logo-symbol"></div>
+            </div>
+            <div class="logo-text">Yetenek<span>Hub</span></div>
+        </div>
+    </div>
+
+    <!-- Giriş Alanı -->
     <header>
-        <h1>YetenekHub</h1>
         <p>Akıllı telefon teknolojisini katma değerli bir üretim ve kişisel gelişim enstrümanına dönüştürün.</p>
     </header>
 
     <div class="container">
-        <!-- Eğitim ve Başvuru Alanları / Rehberler -->
+        <!-- Rehber Alanları -->
         <div class="grid">
             <div class="card">
                 <div>
@@ -195,7 +257,7 @@
                     <h3>🎨 Mobil Logo Tasarımı</h3>
                     <p>Yüksek maliyetli bilgisayarlara ihtiyaç duymadan, mobil cihazlar üzerinden profesyonel standartlarda logo ve kurumsal kimlik hazırlama metotları.</p>
                 </div>
-                <a href="logo-tasarim.html" class="btn">Rehberi İncele</a>
+                <a href="logo-tam-tasarim.html" class="btn">Rehberi İncele</a>
             </div>
             <div class="card">
                 <div>
@@ -207,7 +269,7 @@
         </div>
     </div>
 
-    <!-- VİZYONUMUZ / HAKKIMIZDA BÖLÜMÜ -->
+    <!-- HAKKIMIZDA BÖLÜMÜ -->
     <section class="section-block about-bg">
         <div style="max-width: 800px; margin: 0 auto;">
             <h2 class="section-title">Biz Kimiz?</h2>
